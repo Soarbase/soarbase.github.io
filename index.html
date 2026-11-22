@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-title" content="AEROLOG" />
+  <link rel="apple-touch-icon" href="img/icon-180.png" />
+  <title>AEROLOG — flight logbook and 3D replay for glider pilots</title>
+  <meta name="description" content="AEROLOG is a free Windows flight logbook for glider and light-aircraft pilots: import IGC files, analyse thermals and wind, replay flights in 3D over real terrain, and share flights with friends." />
+  <meta name="theme-color" content="#12284a" />
+  <link rel="icon" type="image/png" href="img/icon-64.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="#">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M2 18.5 30 14v1.6l-11.5 2.1-3.4 6.6h-1.7l1.3-6.3L2 20.1z" fill="currentColor"/><path d="M24.5 10.2 27 9.6l1.2 5" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>
+        AEROLOG
+      </a>
+      <nav aria-label="Main" id="nav">
+        <a href="#replay">3D replay</a>
+        <a href="#analysis">Analysis</a>
+        <a href="#friends">Friends</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-light dl top-dl" href="https://github.com/Kmzztt/aerolog/releases/latest/download/AEROLOG-Windows-portable.exe" download>Get AEROLOG</a>
+      <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">For glider, motor-glider and light-aircraft pilots</p>
+          <h1>Your logbook, flown&nbsp;again in&nbsp;3D.</h1>
+          <p class="lede">
+            Import your IGC files or record with GPS, see every thermal and every glide, and replay
+            the whole flight over real terrain. Then share it with the pilots you fly with.
+          </p>
+          <div class="cta">
+            <a class="btn btn-primary btn-lg dl" href="https://github.com/Kmzztt/aerolog/releases/latest/download/AEROLOG-Windows-portable.exe" download>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M7 11l5 5 5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="dl-label">Download for Windows</span>
+            </a>
+            <p class="cta-meta">Free · Version 0.2.1 · 80 MB · Windows 10 and 11 (64-bit) · No installation needed</p>
+            <p class="phone-note" hidden>
+              You're on a phone. AEROLOG runs on Windows PCs for now, so send yourself the link and download it on your computer.
+              The phone app for recording flights is coming next.
+            </p>
+          </div>
+        </div>
+        <figure class="shot shot-hero">
+          <img src="img/replay.webp" width="1424" height="835" alt="AEROLOG 3D replay: a glider circling in a thermal over Icelandic terrain, with altitude, vario and wind instruments and synchronised charts." />
+        </figure>
+      </div>
+      <div class="wrap facts">
+        <div><strong>IGC in and out</strong><span>Files from LXNAV, Naviter, XCSoar, FLARM and other loggers</span></div>
+        <div><strong>Real terrain</strong><span>Satellite imagery and elevation under every replay</span></div>
+        <div><strong>Works offline</strong><span>Your logbook lives on your computer first</span></div>
+        <div><strong>Private by default</strong><span>You choose which flights friends can see</span></div>
+      </div>
+    </section>
+
+    <!-- Replay -->
+    <section id="replay" class="band">
+      <div class="wrap split">
+        <div class="copy">
+          <p class="kicker">3D replay</p>
+          <h2>Watch the whole flight back, from any angle.</h2>
+          <p>The glider follows your recorded track over real terrain, banking into every turn. Drag the timeline, or click any point on the charts, and everything jumps there together.</p>
+          <ul class="ticks">
+            <li>Follow, behind, side, top-down and free camera</li>
+            <li>Track coloured by altitude, climb, sink or groundspeed</li>
+            <li>Labelled thermal columns, takeoff and landing pins</li>
+            <li>Vario dial and compass with the estimated wind</li>
+            <li>Sun lighting for the actual date and time of the flight</li>
+          </ul>
+        </div>
+        <figure class="shot"><img src="img/replay.webp" loading="lazy" width="1424" height="835" alt="3D replay screen with camera modes, instruments, colour legend and charts." /></figure>
+      </div>
+    </section>
+
+    <!-- Analysis -->
+    <section id="analysis" class="band band-alt">
+      <div class="wrap">
+        <div class="head">
+          <p class="kicker">Flight analysis</p>
+          <h2>The numbers glider pilots actually talk about.</h2>
+          <p>Every flight is analysed the moment it's imported. GPS glitches and frozen fixes are filtered out first, so one bad point doesn't give you a 600&nbsp;km/h top speed.</p>
+        </div>
+        <div class="grid-2">
+          <figure class="shot"><img src="img/flight.webp" loading="lazy" width="1424" height="835" alt="Flight page with statistics, a colour-coded map of the track and the soaring summary." /></figure>
+          <figure class="shot"><img src="img/analysis.webp" loading="lazy" width="1424" height="835" alt="Altitude, groundspeed, vertical speed and distance charts with thermals highlighted, and a table of thermals." /></figure>
+        </div>
+        <dl class="stats-list">
+          <div><dt>Thermals</dt><dd>Each climb found automatically, with its duration, height gained and average climb rate</dd></div>
+          <div><dt>Wind</dt><dd>Estimated from how far your circles drifted, per thermal and for the whole flight</dd></div>
+          <div><dt>Glide</dt><dd>Cruise glide ratio, circling percentage, and time climbing, level and descending</dd></div>
+          <div><dt>The basics</dt><dd>Flight time, distance, max altitude and speed, best climb and worst sink</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="band">
+      <div class="wrap">
+        <div class="head">
+          <p class="kicker">Everything in one place</p>
+          <h2>A logbook that does more than list dates.</h2>
+        </div>
+        <div class="features">
+          <article>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M4 10h16M4 15h10M4 20h7"/></svg>
+            <h3>Logbook</h3>
+            <p>Search, filter by aircraft or date, sort by duration or distance, add notes and photos, and export to CSV.</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 16v4h16v-4"/></svg>
+            <h3>IGC import and export</h3>
+            <p>Drop in files from your logger. Duplicates are detected, and broken files get a clear message instead of a crash.</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 13.5 22 11v1.8l-8 1.4-2.2 4.8h-1.4l.9-4.6L2 15.3z"/></svg>
+            <h3>Your aircraft</h3>
+            <p>Keep your gliders and aeroplanes with photos and specs. Imported flights link to the right aircraft by registration.</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4-6 2.5v13.5l6-2.5 6 2.5 6-2.5V4l-6 2.5zM9 4v13.5M15 6.5V20"/></svg>
+            <h3>Maps</h3>
+            <p>Topographic, satellite and street maps with hillshading and optional 3D terrain. See every flight you've logged on one map.</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+            <h3>Statistics</h3>
+            <p>Hours per month, totals per aircraft, and personal records for distance, duration, altitude and strongest thermal.</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M7.5 7.5a6.4 6.4 0 0 0 0 9M16.5 7.5a6.4 6.4 0 0 1 0 9M4.6 4.6a10.5 10.5 0 0 0 0 14.8M19.4 4.6a10.5 10.5 0 0 1 0 14.8"/></svg>
+            <h3>Live recording</h3>
+            <p>Record with GPS, with live altitude, speed, vario and track. Every fix is saved instantly, so a crash loses nothing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Friends -->
+    <section id="friends" class="band band-navy">
+      <div class="wrap split">
+        <div class="copy">
+          <p class="kicker">Friends</p>
+          <h2>Fly together, even when you didn't.</h2>
+          <p>Create a free account and add the pilots you fly with. Open their shared flights with all the same stats and the full 3D replay, and compare how you each worked the same day.</p>
+          <ol class="steps">
+            <li><strong>Create an account</strong> in the app. It takes a few seconds, with no email confirmation.</li>
+            <li><strong>Swap friend codes.</strong> Copy yours from the Friends page and send it however you like.</li>
+            <li><strong>Share a flight</strong> by setting it to Friends. It appears in their feed straight away.</li>
+          </ol>
+          <p class="note">Every flight is private until you share it. Friends can view your shared flights but never edit or delete them, and nobody can find you in pilot search unless you turn that on.</p>
+        </div>
+        <figure class="shot"><img src="img/overview.webp" loading="lazy" width="1424" height="835" alt="AEROLOG overview with totals, the latest flight on a map and recent flights." /></figure>
+      </div>
+    </section>
+
+    <!-- Live -->
+    <section class="band">
+      <div class="wrap split split-rev">
+        <figure class="shot"><img src="img/live.webp" loading="lazy" width="1424" height="835" alt="Live tracking screen with altitude, groundspeed, vertical speed and track instruments and the recorded path on a map." /></figure>
+        <div class="copy">
+          <p class="kicker">Live tracking</p>
+          <h2>Press start, then just fly.</h2>
+          <p>The recorder shows altitude, groundspeed, vertical speed, track and GPS accuracy as you fly. It logs any gaps in the GPS signal, and if the app is closed mid-flight, it offers to resume or save when you reopen it.</p>
+          <p class="note">On a PC you can try it with the built-in simulated GPS. A phone app that keeps recording with the screen locked is coming next.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="band">
+      <div class="wrap">
+        <div class="head">
+          <p class="kicker">Pricing</p>
+          <h2>Free to fly. Premium when you want more.</h2>
+          <p>Everything AEROLOG does today is free, and it stays free. Premium adds features for pilots who fly a lot, fly together, or fly competitively.</p>
+        </div>
+        <div class="plans">
+          <article class="plan">
+            <div class="plan-top">
+              <h3>Free</h3>
+              <p class="price"><span>€0</span> forever</p>
+              <p class="plan-sub">Available now</p>
+            </div>
+            <ul class="ticks">
+              <li>Unlimited flights in your logbook</li>
+              <li>IGC import and export</li>
+              <li>Full flight analysis: thermals, wind, glide ratio</li>
+              <li>3D replay over real terrain</li>
+              <li>Maps, statistics and personal records</li>
+              <li>Account, friends and flight sharing</li>
+              <li>Live recording with GPS</li>
+            </ul>
+            <a class="btn btn-primary btn-block dl" href="https://github.com/Kmzztt/aerolog/releases/latest/download/AEROLOG-Windows-portable.exe" download><span class="dl-label">Download for Windows</span></a>
+          </article>
+
+          <article class="plan plan-premium">
+            <div class="plan-top">
+              <div class="row-between"><h3>Premium</h3><span class="badge">Coming soon</span></div>
+              <p class="price"><span>€4.99</span> / month</p>
+              <p class="plan-sub">or €39 / year (save 35%) · planned price</p>
+            </div>
+            <ul class="ticks">
+              <li><strong>Compare flights in 3D:</strong> replay up to 5 flights from the same day together, yours and your friends', and see who climbed where</li>
+              <li><strong>Live tracking:</strong> friends and your club follow you on the map while you fly (with the phone app)</li>
+              <li><strong>Thermal heat map:</strong> every climb from all your flights on one map, showing where the lift usually is</li>
+              <li><strong>Video export:</strong> save any 3D replay as an MP4 to share</li>
+              <li><strong>High-resolution 3D terrain</strong> and sharper satellite imagery</li>
+              <li><strong>Offline map packs</strong> for flying where there's no signal</li>
+              <li><strong>Clubs:</strong> a shared club logbook, season leaderboards and statistics</li>
+              <li><strong>Cloud backup</strong> of photos and original IGC files</li>
+            </ul>
+            <form class="waitlist" novalidate>
+              <label for="wl-email">Get an email when Premium launches</label>
+              <div class="waitlist-row">
+                <input id="wl-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" inputmode="email" required maxlength="254" />
+                <button class="btn btn-primary" type="submit">Notify me</button>
+              </div>
+              <p class="waitlist-msg" role="status" aria-live="polite"></p>
+              <p class="fine">We'll only use your email to tell you when Premium is available.</p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="band band-alt">
+      <div class="wrap narrow">
+        <div class="head">
+          <p class="kicker">Questions</p>
+          <h2>Good to know</h2>
+        </div>
+        <details open>
+          <summary>Is AEROLOG free?</summary>
+          <p>Yes. Everything in the app today is free, including the account, friends and sharing. Premium will add extra features on top; nothing you use now will move behind it.</p>
+        </details>
+        <details>
+          <summary>When is Premium available?</summary>
+          <p>Premium isn't available yet, and nobody can be charged for it. Leave your email under Pricing and we'll let you know when it launches.</p>
+        </details>
+        <details>
+          <summary>Can I use it on my phone (iPhone or Samsung)?</summary>
+          <p>This website works on any phone, but the app itself runs on Windows PCs for now. A phone app for iPhone and Android that records flights with the screen locked is the next step.</p>
+        </details>
+        <details>
+          <summary>Windows says “Windows protected your PC”. Is that normal?</summary>
+          <p>Yes. AEROLOG isn't code-signed yet, so Windows SmartScreen warns about it the first time. Click <strong>More info</strong>, then <strong>Run anyway</strong>.</p>
+        </details>
+        <details>
+          <summary>Do I need to install anything?</summary>
+          <p>No. It's a single file: double-click it and it runs. Keep it wherever you like, such as your Desktop or a USB stick.</p>
+        </details>
+        <details>
+          <summary>Do I need an account?</summary>
+          <p>No. Choose “Continue on this device only” and everything stays on your computer. You only need an account for friends and sharing, and your existing flights upload when you sign in.</p>
+        </details>
+        <details>
+          <summary>Does it work without internet?</summary>
+          <p>Your logbook, statistics and analysis work offline. Maps, satellite imagery and terrain for the 3D replay are downloaded while you view them, and syncing with friends needs a connection.</p>
+        </details>
+        <details>
+          <summary>Can I use it for badges, records or competitions?</summary>
+          <p>No. AEROLOG is a personal logbook and analysis tool, not a certified instrument or IGC-approved flight recorder. It can read your approved logger's IGC files, but files it records itself are marked as unapproved.</p>
+        </details>
+        <details>
+          <summary>What about Mac?</summary>
+          <p>AEROLOG currently runs on Windows only.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="band end">
+      <div class="wrap end-row">
+        <div>
+          <h2>Bring your last flight home.</h2>
+          <p>Download AEROLOG, import an IGC file, and watch it again in 3D.</p>
+        </div>
+        <a class="btn btn-primary btn-lg dl" href="https://github.com/Kmzztt/aerolog/releases/latest/download/AEROLOG-Windows-portable.exe" download><span class="dl-label">Download for Windows</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-row">
+      <span>AEROLOG 0.2.1</span>
+      <span class="muted">Map data © OpenStreetMap contributors, OpenTopoMap · Imagery © Esri · Elevation: AWS Terrain Tiles · 3D by CesiumJS. Screenshots show a clearly labelled demonstration flight.</span>
+    </div>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
+</html>
