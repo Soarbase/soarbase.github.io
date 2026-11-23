@@ -1,4 +1,4 @@
-// AEROLOG website: phone menu, phone-aware download buttons, Premium waitlist.
+// Soarbase website: phone menu, phone-aware download buttons, Premium waitlist.
 (() => {
   // ---------------------------------------------------------------- phone menu
   const btn = document.querySelector('.menu-btn');
@@ -29,21 +29,21 @@
         const url = location.href.split('#')[0];
         try {
           if (navigator.share) {
-            await navigator.share({ title: 'AEROLOG for Windows', text: 'Download AEROLOG on my PC', url });
+            await navigator.share({ title: 'Soarbase for Windows', text: 'Download Soarbase on my PC', url });
             return;
           }
           await navigator.clipboard.writeText(url);
           toast('Link copied. Open it on your computer to download.');
         } catch (err) {
           if (err && err.name === 'AbortError') return; // user closed the share sheet
-          toast('Open this page on your Windows computer to download AEROLOG.');
+          toast('Open this page on your Windows computer to download Soarbase.');
         }
       });
     });
   }
 
   // ---------------------------------------------------------------- Premium waitlist
-  // Inserts into the AEROLOG Supabase project. The publishable key is designed to be public;
+  // Inserts into the Soarbase Supabase project. The publishable key is designed to be public;
   // the table only allows anonymous INSERT (no reading), enforced by Row Level Security.
   const SUPABASE_URL = 'https://oektxqatiuzwwpfhiqow.supabase.co';
   const SUPABASE_KEY = 'sb_publishable_Jp7CQxMuRRAZ8G-MAEXTwA_LBfJzPxo';
