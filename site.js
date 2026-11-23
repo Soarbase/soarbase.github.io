@@ -11,9 +11,9 @@
   nav.addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
 
-  // ---------------------------------------------------------------- download on phones
+  // ---------------------------------------------------------------- phones
   // iPhone, iPad (which reports as Mac with touch), and Android (Samsung and others) can't run
-  // a Windows .exe, so offer to send the page to the user's computer instead.
+  // the Windows .exe, so the download buttons open the phone version of Soarbase instead.
   const ua = navigator.userAgent;
   const isPhoneOrTablet = /iPhone|iPad|iPod|Android/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
   if (isPhoneOrTablet) {
@@ -21,24 +21,10 @@
     document.querySelectorAll('.phone-note').forEach((p) => (p.hidden = false));
     document.querySelectorAll('a.dl').forEach((a) => {
       a.removeAttribute('download');
+      a.setAttribute('href', 'app/');
       const label = a.querySelector('.dl-label');
-      if (label) label.textContent = 'Send link to my computer';
-      else a.textContent = 'Get it';
-      a.addEventListener('click', async (e) => {
-        e.preventDefault();
-        const url = location.href.split('#')[0];
-        try {
-          if (navigator.share) {
-            await navigator.share({ title: 'Soarbase for Windows', text: 'Download Soarbase on my PC', url });
-            return;
-          }
-          await navigator.clipboard.writeText(url);
-          toast('Link copied. Open it on your computer to download.');
-        } catch (err) {
-          if (err && err.name === 'AbortError') return; // user closed the share sheet
-          toast('Open this page on your Windows computer to download Soarbase.');
-        }
-      });
+      if (label) label.textContent = 'Open Soarbase on this phone';
+      else a.textContent = 'Open Soarbase';
     });
   }
 

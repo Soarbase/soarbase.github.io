@@ -198,3 +198,16 @@ body { -webkit-tap-highlight-color: rgba(163, 20, 123, 0.15); }
 
 /* jump links land below the sticky header */
 section[id] { scroll-margin-top: calc(72px + env(safe-area-inset-top)); }
+
+/* ---------- download alternatives & phone section */
+.cta-alt { margin-top: 6px; font-size: 14px; color: var(--muted); }
+.cta-alt a { color: var(--navy-2); }
+.phone-note a { color: var(--magenta); font-weight: 600; }
+.phone-open { margin-top: 24px; }
+.phone-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.phone-steps article { background: #fff; border: 1px solid var(--line); border-radius: 4px; padding: 26px 28px 30px; }
+.phone-steps h3 { font-size: 20px; }
+.phone-steps .steps { margin-top: 18px; }
+.phone-steps .steps li { color: var(--ink-2); }
+.phone-steps .steps strong { color: var(--navy); }
+@media (max-width: 760px) { .phone-steps { grid-template-columns: 1fr; } .phone-steps article { padding: 22px 20px 24px; } }

@@ -1,8 +1,9 @@
 # Soarbase
 
-Flight logbook and 3D replay for glider and light-aircraft pilots, for Windows.
+Flight logbook and 3D replay for glider and light-aircraft pilots.
 
-- Website: https://kmzztt.github.io/soarbase/
-- Download: [latest release](https://github.com/Kmzztt/soarbase/releases/latest)
+- Website: https://soarbase.github.io/
+- On your phone: https://soarbase.github.io/app/
+- Windows download: [latest release](https://github.com/Soarbase/soarbase.github.io/releases/latest)
 
-This repository hosts the Soarbase website and release downloads.
+This repository hosts the Soarbase website, the phone version and the Windows release downloads.
