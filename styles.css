@@ -211,3 +211,6 @@ section[id] { scroll-margin-top: calc(72px + env(safe-area-inset-top)); }
 .phone-steps .steps li { color: var(--ink-2); }
 .phone-steps .steps strong { color: var(--navy); }
 @media (max-width: 760px) { .phone-steps { grid-template-columns: 1fr; } .phone-steps article { padding: 22px 20px 24px; } }
+
+/* phones: the Windows download details are not relevant there */
+.is-mobile .cta-meta, .is-mobile .cta-alt { display: none; }
