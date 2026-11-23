@@ -32,7 +32,8 @@ self.addEventListener('fetch', (e) => {
 
   if (req.mode === 'navigate') {
     e.respondWith(
-      fetch(req)
+      // no-store: GitHub Pages lets browsers reuse index.html for 10 minutes; always ask for the newest version.
+      fetch(req, { cache: 'no-store' })
         .then((res) => {
           const copy = res.clone();
           if (res.ok) caches.open(SHELL).then((c) => c.put('./index.html', copy));
