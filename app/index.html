@@ -16,10 +16,14 @@
     <meta name="apple-mobile-web-app-title" content="Soarbase" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <!-- Fonts load without blocking the first paint (system font shows until they arrive). -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" /></noscript>
     <title>Soarbase</title>
-    <script type="module" crossorigin src="./assets/index-Domf68Vf.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/cesium-DHkj-MnN.js">
+    <script type="module" crossorigin src="./assets/index-DsZUoOZL.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/react-N1UVPsR1.js">
+    <link rel="modulepreload" crossorigin href="./assets/supabase-0rlFKgat.js">
     <link rel="stylesheet" crossorigin href="./assets/index-BNEUw-pe.css">
   </head>
   <body>
